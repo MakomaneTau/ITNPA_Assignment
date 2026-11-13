@@ -1,5 +1,3 @@
-"""Train, evaluate, and save the tuned abstract classifier."""
-
 import json
 import pickle
 import sys

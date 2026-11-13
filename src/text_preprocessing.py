@@ -1,5 +1,3 @@
-"""Text preparation shared by training and saved-model inference."""
-
 import re
 
 import nltk
@@ -22,7 +20,6 @@ def ensure_nltk_resources():
 
 
 def preprocess_abstracts(abstracts):
-    """Apply the same cleaning, lemmatization, and stop-word removal to each text."""
     lemmatizer = WordNetLemmatizer()
     cleaned = []
 
