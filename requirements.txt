@@ -1,3 +1,9 @@
+numpy
+matplotlib
+wordcloud
+pyLDAvis
+notebook
+ipykernel
 streamlit
 scikit-learn
 nltk
