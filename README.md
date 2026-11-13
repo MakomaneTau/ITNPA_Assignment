@@ -35,6 +35,37 @@ The first prediction may download NLTK data. See the
 [deployment guide](deployment/README.md) for preparing those resources in advance,
 rebuilding the saved model, and troubleshooting.
 
+## Explore the interactive topic map (Question 4.2)
+
+From the repository root, after installing `requirements.txt`, run:
+
+```powershell
+python intertopic_map.py
+```
+
+The script uses the same article cleaning, lemmatisation, four-topic LDA settings,
+and topic numbering as Questions 4.1?4.2. It opens an interactive pyLDAvis map in
+your default browser and saves `deployment/lda_intertopic_map.html`. Reopen that
+HTML file in a browser at any time; its JavaScript and CSS are embedded for offline
+use. Initial NLTK resource downloads require internet access.
+
+Select a topic circle or use **Next Topic** to inspect that topic's words. Move
+the relevance slider to compare common terms with distinctive terms. Clear the
+topic selection to view the most salient words across the corpus. Circle area
+represents token-weighted topic prevalence; distances are an exploratory t-SNE
+projection. The supplied duplicate articles remain in the corpus.
+
+To generate the file without opening a browser, or choose its location:
+
+```powershell
+python intertopic_map.py --no-browser --output deployment/my_topic_map.html
+```
+
+If using the virtual environment above, replace `python` with
+`.\.venv\Scripts\python.exe`. The script resolves the supplied corpus relative to
+its own location, so it can also run from another working directory. Use
+`python intertopic_map.py --help` for all options.
+
 ## Run the analysis notebooks
 
 Install the analysis dependencies into the same environment:
